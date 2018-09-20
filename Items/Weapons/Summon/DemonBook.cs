@@ -16,22 +16,22 @@ namespace Monstroriam.Items.Weapons.Summon
 
 		public override void SetDefaults()
 		{
-			item.damage = 12;
+			item.damage = 20;
 			item.summon = true;
-			item.mana = 9;
+			item.mana = 15;
 			item.width = 28;
 			item.height = 32;
-			item.useTime = 40;
-			item.useAnimation = 40;
+			item.useTime = 42;
+			item.useAnimation = 42;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
-			item.knockBack = 3;
-			item.value = 2200;
-			item.rare = 2;
+			item.knockBack = 1;
+			item.value = 3200;
+			item.rare = 4;
 			item.UseSound = SoundID.Item8;
-			item.autoReuse = false;
+			item.autoReuse = true;
 			item.shoot = mod.ProjectileType("DemoPro");
-			item.shootSpeed = 10f;
+			item.shootSpeed = 15f;
 		}
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
