@@ -16,18 +16,18 @@ namespace Monstroriam.Items.Weapons.Summon
 
 		public override void SetDefaults()
 		{
-			item.damage = 12;
+			item.damage = 16;
 			item.summon = true;
-			item.mana = 9;
+			item.mana = 12;
 			item.width = 28;
 			item.height = 32;
 			item.useTime = 40;
 			item.useAnimation = 40;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
-			item.knockBack = 3;
+			item.knockBack = 5;
 			item.value = 2200;
-			item.rare = 2;
+			item.rare = 3;
 			item.UseSound = SoundID.Item8;
 			item.autoReuse = false;
 			item.shoot = mod.ProjectileType("SharkPro");
