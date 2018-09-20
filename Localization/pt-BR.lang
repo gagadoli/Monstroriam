@@ -1,0 +1,78 @@
+BuffName.SunPower=Poder do Sol
+BuffDescription.SunPower="Resistência ao frio"
+
+BuffName.CrystalPower=Poder do Cristal
+BuffDescription.CrystalPower="Mais Lacaios!"
+
+ProjectileName.VulcanoSentry=Sentinela Vulcanico
+
+ProjectileName.DemoPro=Projetil Demônio
+
+ProjectileName.EnchantedBall=Bola de neve Encantada
+
+ProjectileName.EtherianShard=Estilhaço Etéria
+
+ProjectileName.HoneyPro=Projétil Mel
+
+ProjectileName.SharkPro=Projétil Tubarão
+
+ProjectileName.SpiderPro=Projétil Aranha
+
+ProjectileName.SunPetal=Pétala de girasol
+
+ItemName.CactusShield=Escudo de cacto
+ItemTooltip.CactusShield=Garante 1 de defesa \nAtacantes recebem dano de volta 
+
+ItemName.ShadowflameScarf=Cachecol da Chama Sombria
+ItemTooltip.ShadowflameScarf=Projéteis de Lacaios causam Chama Sombria
+
+ItemName.DCrystal=Cristal dos Defensores
+ItemTooltip.DCrystal=Coloque essa coisa na parede
+
+ItemName.LeafOrb=Orbe da folha
+ItemTooltip.LeafOrb=Criado a partir da essência de uma Ninfa
+
+ItemName.SunOrb=Orbe do sol
+ItemTooltip.SunOrb=É igual ao sol, mas melhor
+
+ItemName.DemonBook=Livro dos Demônios
+ItemTooltip.DemonBook=Invoca um demônio
+
+ItemName.SharkBook=Livro dos tubarões
+ItemTooltip.SharkBook=Invoca um tubarão
+
+ItemName.VulcanoWand=Varinha do vulcão
+ItemTooltip.VulcanoWand=Invoca um sentinela vulcanico
+
+ItemName.SpiderBook=Livro das Aranhas
+ItemTooltip.SpiderBook=Invoca uma aranha
+
+ItemName.ChlorophyteStaff=Cajado de clorofito
+ItemTooltip.ChlorophyteStaff=Dispara orbes de clorofito
+
+ItemName.CrystalWand=Varinha de cristal
+ItemTooltip.CrystalWand=Dispara cristais que caem do céu
+
+ItemName.EtherianStaff=Cajado de Eteria
+ItemTooltip.EtherianStaff=Dispara projéteis de Éter
+
+ItemName.CursedRod=Cajado Amaldiçoado
+ItemTooltip.CursedRod=Dispara crãnios amaldiçoados
+
+ItemName.HoneyWand=Varinha do mel
+ItemTooltip.HoneyWand=Dispara mel
+
+ItemName.PaperTome=Tomo de papel
+ItemTooltip.PaperTome=É mais perigoso do que parece
+
+ItemName.SnowballWand=Varinha de bola de neve
+ItemTooltip.SnowballWand=Dispara bolas de neve Encantadas
+
+ItemName.SunflowerStaff=Cajado de girasol
+ItemTooltip.SunflowerStaff=Dispara uma pétala de girasol
+
+ItemName.ToxicStaff=Cajado Tóxico
+ItemTooltip.ToxicStaff=Dispara bolhas tóxicas
+
+ItemName.ForbiddenWand=Varinha Proibida
+ItemTooltip.ForbiddenWand=Dispara várias explosões negras
