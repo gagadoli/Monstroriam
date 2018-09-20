@@ -21,12 +21,12 @@ namespace Monstroriam.Items.Weapons.Summon
 			item.mana = 9;
 			item.width = 28;
 			item.height = 32;
-			item.useTime = 40;
-			item.useAnimation = 40;
+			item.useTime = 38;
+			item.useAnimation = 38;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
-			item.knockBack = 3;
-			item.value = 2200;
+			item.knockBack = 2;
+			item.value = 1200;
 			item.rare = 2;
 			item.UseSound = SoundID.Item8;
 			item.autoReuse = false;
