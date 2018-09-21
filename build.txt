@@ -1,6 +1,6 @@
 author = Gagadoliano
 
-version = 1.0.0
+version = 1.0.1
 displayName = Monstroriam
 
 homepage = https://forums.terraria.org/index.php?threads/monstroriam.59093/
