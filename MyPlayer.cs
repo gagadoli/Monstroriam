@@ -35,7 +35,7 @@ namespace Monstroriam
 		{			
 			if ((proj.minion || ProjectileID.Sets.MinionShot[proj.type]) && shadowflameSummon && !proj.noEnchantments)
 			{
-				target.AddBuff(BuffID.ShadowFlame, 30, false);
+				target.AddBuff(BuffID.ShadowFlame, 90, false);
 			}
 		}
 	}
