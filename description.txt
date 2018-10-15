@@ -3,7 +3,10 @@ There are also some post-hardmode weapons too.
 
 Features:
 10 New Magic Weapons
-3 New Summon Weapons and 1 New Sentry
+5 New Summon Weapons
 2 New Accessories
 3 New Furnitures
 PT-BR Localization
+
+First update:
+Added a new sentry

@@ -7,13 +7,13 @@ using Terraria.ModLoader;
 
 namespace Monstroriam.Projectiles.Minions
 {
-	public class VulcanoSentry : ModProjectile
+	public class SmasherSentry : ModProjectile
     {
  
         public override void SetDefaults()
         {
-            projectile.width = 60;
-            projectile.height = 74;  
+            projectile.width = 42;
+            projectile.height = 68;  
             projectile.hostile = false;  
             projectile.friendly = false;   
             projectile.ignoreWater = false; 
@@ -24,21 +24,16 @@ namespace Monstroriam.Projectiles.Minions
             ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true;
         }
 
-		public override void SetStaticDefaults()
-		{
-		   Main.projFrames[projectile.type] = 4;
-        }
-
+		public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            projectile.velocity.X = 0;
+            projectile.velocity.Y = 0;
+			return false;
+		}
         public override void AI()
-        {	
-			if (++projectile.frameCounter >= 6)
-			{
-				projectile.frameCounter = 0;
-				if (++projectile.frame >= 4)
-				{
-					projectile.frame = 0;
-				}
-			}
+        {
+			projectile.velocity.Y = 10;
+
             for (int i = 0; i < 200; i++)
             {
                 NPC target = Main.npc[i];
@@ -54,8 +49,8 @@ namespace Monstroriam.Projectiles.Minions
                         distance = 1.6f / distance;
                         shootToX *= distance * 3;
                         shootToY *= distance * 3;
-                        int damage = 19; 
-                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, 15, damage, 0, Main.myPlayer, 0f, 0f);
+                        int damage = 10; 
+                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, shootToX, shootToY, mod.ProjectileType("SentryStomp"), damage, 0, Main.myPlayer, 0f, 0f);
                         projectile.ai[0] = 0f;
                     }
                 }

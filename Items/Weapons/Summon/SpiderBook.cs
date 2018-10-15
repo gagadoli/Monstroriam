@@ -10,7 +10,7 @@ namespace Monstroriam.Items.Weapons.Summon
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Spider Book");
-			Tooltip.SetDefault("Summons a spiritual Spider");
+			Tooltip.SetDefault("Summons a Spider");
 			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 

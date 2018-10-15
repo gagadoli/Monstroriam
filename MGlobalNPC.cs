@@ -77,6 +77,13 @@ namespace Monstroriam
 				}
 			}
 
+			if (npc.type == NPCID.TombCrawlerHead)
+			{
+					if (Main.rand.NextFloat() < .001f)
+					{
+						Item.NewItem(npc.getRect(), mod.ItemType("TombCrawlerStaff"));
+					}
+			}
 
 			if (Main.hardMode && !npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly)
 			{

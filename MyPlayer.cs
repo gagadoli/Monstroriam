@@ -19,6 +19,7 @@ namespace Monstroriam
 		public bool CactusShield = false;
 		public bool VulcanoSentry = false;
 		public bool MeatTower = false;
+		public bool SmasherSentry = false;
 		public bool shadowflameSummon;
 
 		public override void ResetEffects()
@@ -27,8 +28,9 @@ namespace Monstroriam
 			SunPower = false;
 			CactusShield = false;	
 			VulcanoSentry = false;
-			shadowflameSummon = false;
 			MeatTower = false;
+			SmasherSentry = false;
+			shadowflameSummon = false;
 		}
 
 		public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)

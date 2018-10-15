@@ -10,7 +10,7 @@ namespace Monstroriam.Items.Weapons.Summon
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Demon Book");
-			Tooltip.SetDefault("Summons a demon");
+			Tooltip.SetDefault("Summons a Demon");
 			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
