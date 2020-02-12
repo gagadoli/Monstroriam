@@ -11,69 +11,69 @@ namespace Monstroriam
 	{
 		public override void NPCLoot(NPC npc)
 		{
-			if(npc.type == NPCID.DD2DarkMageT1) //boss drop
+			if(npc.type == NPCID.DD2DarkMageT1)
 			{
 				if (Main.rand.NextFloat() < .15f)
 				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("PaperTome"));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("PaperTome"));
 				}
 			}
 
 
-			if(npc.type == NPCID.WitchDoctor) //town npc drop
+			if(npc.type == NPCID.WitchDoctor)
 			{
 				if (Main.rand.NextFloat() < .55f)
 				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("ToxicStaff"));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ToxicStaff"));
 				}
 			}
 
 
-			if(npc.type == NPCID.Dryad) //town npc drop
+			if(npc.type == NPCID.Dryad)
 			{
 				if (Main.rand.NextFloat() < .55f)
 				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("LeafOrb"));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LeafOrb"));
 				}
 			}
 
 
-			if (!npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly) //only non-bosses agressive npcs drop
+			if (!npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly)
 			{
-				if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneOldOneArmy) //biome drop
+				if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneOldOneArmy)
 				{
 					if (Main.rand.NextFloat() < .0002f)
 					{
-						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("DCrystal"));
+						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DCrystal"));
 					}
 				}
 			}
 
 
-			if(npc.type == NPCID.CursedSkull) //npc drop
+			if(npc.type == NPCID.CursedSkull)
 			{
 				if (Main.rand.NextFloat() < .0015f)
 				{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("CursedRod"));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CursedRod"));
 				}
 			}
 
-			if(npc.type == NPCID.Tumbleweed && Main.hardMode) //npc drop
+			if(npc.type == NPCID.Tumbleweed && Main.hardMode)
 			{
 				if (Main.rand.NextFloat() < .0095f)
 				{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("ForbiddenWand"));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ForbiddenWand"));
 				}
 			}
 
 
-			if (!npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly) //only non-bosses agressive npcs drop
+			if (!npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly)
 			{
-				if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneUnderworldHeight) //biome drop
+				if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneUnderworldHeight)
 				{
 					if (Main.rand.NextFloat() < .0008f)
 					{
-						Item.NewItem(npc.getRect(), ItemType("VulcanoWand"));
+						Item.NewItem(npc.getRect(), mod.ItemType("VulcanoWand"));
 					}
 				}
 			}
@@ -82,7 +82,7 @@ namespace Monstroriam
 			{
 					if (Main.rand.NextFloat() < .001f)
 					{
-						Item.NewItem(npc.getRect(), ItemType("TombCrawlerStaff"));
+						Item.NewItem(npc.getRect(), mod.ItemType("TombCrawlerStaff"));
 					}
 			}
 
@@ -92,7 +92,7 @@ namespace Monstroriam
 				{
 					if (Main.rand.NextFloat() < .0002f)
 					{
-						Item.NewItem(npc.getRect(), ItemType("CrystalWand"));
+						Item.NewItem(npc.getRect(), mod.ItemType("CrystalWand"));
 					}
 				}
 			}
@@ -104,7 +104,7 @@ namespace Monstroriam
 				{
 					if (Main.rand.NextFloat() < .0009f)
 					{
-						Item.NewItem(npc.getRect(), ItemType("ShadowflameScarf"));
+						Item.NewItem(npc.getRect(), mod.ItemType("ShadowflameScarf"));
 					}
 				}
 			}

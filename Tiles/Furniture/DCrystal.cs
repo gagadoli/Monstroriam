@@ -28,7 +28,7 @@ namespace Monstroriam.Tiles.Furniture
 		{
 	        if(frameX == 0)
 		    {
-				Item.NewItem(i * 16, j * 16, 48, 48, ItemType("DCrystal"));
+				Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("DCrystal"));
 			}
 		}
 
