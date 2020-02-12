@@ -44,7 +44,7 @@ namespace Monstroriam.Projectiles.Minions
 
                 if (distance < 420f && !target.friendly && target.active)
                 {
-                    if (projectile.ai[0] > 180f) // Time in (60 = 1 second) 
+                    if (projectile.ai[0] > 180f) 
                     {
                         distance = 1.6f / distance;
                         shootToX *= distance * 3;

@@ -13,7 +13,7 @@ namespace Monstroriam.Items.Weapons.Magic
 		{
 			DisplayName.SetDefault("Forbidden Wand");
 			Tooltip.SetDefault("Shoots Black bolts");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			Item.staff[item.type] = true; 
 		}
 
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace Monstroriam.Items.Weapons.Magic
 			item.useTime = 35;
 			item.useAnimation = 35;
 			item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
+			item.noMelee = true; 
 			item.knockBack = 8;
 			item.value = 10000;
 			item.rare = 7;
@@ -36,18 +36,18 @@ namespace Monstroriam.Items.Weapons.Magic
 			item.shootSpeed = 15f;
 		}
 
-		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack) //shotgun style
+		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack) 
 		{
-			int numberProjectiles = 3 + Main.rand.Next(6); // projectile amount + variation
+			int numberProjectiles = 3 + Main.rand.Next(6); 
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(15)); //15 degree spread.
-				// If you want to randomize the speed to stagger the projectiles
+				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(15)); 
+				
 				float scale = 1f - (Main.rand.NextFloat() * .3f);
 				perturbedSpeed = perturbedSpeed * scale; 
 				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
 			}
-			return false; // return false because we don't want tmodloader to shoot projectile
+			return false;
 		}
 	}
 }

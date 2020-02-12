@@ -11,7 +11,7 @@ namespace Monstroriam.Items.Weapons.Summon
 		{
 			DisplayName.SetDefault("Spider Book");
 			Tooltip.SetDefault("Summons a Spider");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			Item.staff[item.type] = true;
 		}
 
 		public override void SetDefaults()
@@ -24,7 +24,7 @@ namespace Monstroriam.Items.Weapons.Summon
 			item.useTime = 38;
 			item.useAnimation = 38;
 			item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
+			item.noMelee = true; 
 			item.knockBack = 2;
 			item.value = 1200;
 			item.rare = 2;
@@ -34,7 +34,7 @@ namespace Monstroriam.Items.Weapons.Summon
 			item.shootSpeed = 10f;
 		}
 
-		public override void AddRecipes() //item's recipe
+		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Book);

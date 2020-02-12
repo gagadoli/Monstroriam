@@ -10,7 +10,7 @@ namespace Monstroriam.Items.Weapons.Magic
 		{
 			DisplayName.SetDefault("Honey Wand");
 			Tooltip.SetDefault("Shoots honey spores");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			Item.staff[item.type] = true; 
 		}
 
 		public override void SetDefaults()
@@ -23,7 +23,7 @@ namespace Monstroriam.Items.Weapons.Magic
 			item.useTime = 35;
 			item.useAnimation = 35;
 			item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
+			item.noMelee = true; 
 			item.knockBack = 4;
 			item.value = 5000;
 			item.rare = 3;

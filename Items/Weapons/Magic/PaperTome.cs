@@ -12,7 +12,7 @@ namespace Monstroriam.Items.Weapons.Magic
 		{
 			DisplayName.SetDefault("Paper Tome");
 			Tooltip.SetDefault("Much more deadly than it looks");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			Item.staff[item.type] = true; 
 		}
 
 		public override void SetDefaults()
@@ -25,7 +25,7 @@ namespace Monstroriam.Items.Weapons.Magic
 			item.useTime = 30;
 			item.useAnimation = 30;
 			item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
+			item.noMelee = true; 
 			item.knockBack = 5;
 			item.value = 3000;
 			item.rare = 1;

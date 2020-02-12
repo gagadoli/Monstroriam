@@ -10,36 +10,36 @@ namespace Monstroriam.Items.Weapons.Magic
 		{
 			DisplayName.SetDefault("Sunflower Staff");
 			Tooltip.SetDefault("Shoots Sunflower Petals");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			Item.staff[item.type] = true; 
 		}
 
 		public override void SetDefaults()
 		{
-			item.damage = 5; //projectile damage
-			item.magic = true; //does magic damage
-			item.mana = 2; //mana cost
-			item.width = 46; //sprite size
-			item.height = 46; //sprite size
+			item.damage = 5; 
+			item.magic = true; 
+			item.mana = 2; 
+			item.width = 46; 
+			item.height = 46; 
 			item.useTime = 45;
 			item.useAnimation = 45;
-			item.useStyle = 5; //staff style
-			item.noMelee = true; //so the item's animation doesn't do damage
-			item.knockBack = 2; //almost no knockback
-			item.value = 300; //3 silver coins
-			item.rare = 0; //very bad
+			item.useStyle = 5; 
+			item.noMelee = true; 
+			item.knockBack = 2; 
+			item.value = 300; 
+			item.rare = 0; 
 			item.UseSound = SoundID.Item8;
-			item.autoReuse = false; //auto attack
-			item.shoot = mod.ProjectileType("SunPetal"); //custom projectile
+			item.autoReuse = false; 
+			item.shoot = mod.ProjectileType("SunPetal"); 
 			item.shootSpeed = 12f;
 		}
 
-		public override void AddRecipes() //item's recipe
+		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.CopperShortsword); //materials
+			recipe.AddIngredient(ItemID.CopperShortsword); 
 			recipe.AddIngredient(ItemID.Sunflower);
-			recipe.SetResult(this); //craft result = this item
-			recipe.AddTile(TileID.WorkBenches); //need to be near this in game
+			recipe.SetResult(this); 
+			recipe.AddTile(TileID.WorkBenches); 
 			recipe.AddRecipe();
 		}
 	}

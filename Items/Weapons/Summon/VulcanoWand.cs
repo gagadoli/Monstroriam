@@ -9,7 +9,6 @@ namespace Monstroriam.Items.Weapons.Summon
 {
 	public class VulcanoWand : ModItem
 	{
-
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Vulcano Wand");

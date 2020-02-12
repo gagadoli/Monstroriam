@@ -13,7 +13,7 @@ namespace Monstroriam.Items.Weapons.Magic
 		{
 			DisplayName.SetDefault("Chlorophyte Staff");
 			Tooltip.SetDefault("Shoots Chlorophyte Orbs");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			Item.staff[item.type] = true;
 		}
 
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace Monstroriam.Items.Weapons.Magic
 			item.useTime = 25;
 			item.useAnimation = 25;
 			item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
+			item.noMelee = true;
 			item.knockBack = 5;
 			item.value = 62000;
 			item.rare = 7;
@@ -38,15 +38,15 @@ namespace Monstroriam.Items.Weapons.Magic
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			int numberProjectiles = 2 + Main.rand.Next(5); // 4 or 5 shots
+			int numberProjectiles = 2 + Main.rand.Next(5);
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(20)); // 30 degree spread.
+				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(20));
 				float scale = 1f - (Main.rand.NextFloat() * .3f);
 				perturbedSpeed = perturbedSpeed * scale; 
 				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
 			}
-			return false; // return false because we don't want tmodloader to shoot projectile
+			return false;
 		}
 
 		public override void AddRecipes()

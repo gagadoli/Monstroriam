@@ -7,6 +7,7 @@ using Terraria.Enums;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Monstroriam.Buffs;
+using static Terraria.ModLoader.ModContent;
 
 namespace Monstroriam.Tiles.Furniture
 {
@@ -27,7 +28,7 @@ namespace Monstroriam.Tiles.Furniture
 		{
 	        if(frameX == 0)
 		    {
-				Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("DCrystal"));
+				Item.NewItem(i * 16, j * 16, 48, 48, ItemType("DCrystal"));
 			}
 		}
 

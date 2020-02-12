@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using static Terraria.ModLoader.ModContent;
 
 namespace Monstroriam.Tiles.Furniture
 {
@@ -24,7 +25,7 @@ namespace Monstroriam.Tiles.Furniture
 		{
 	        if(frameX == 0)
 		    {
-				Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("SunOrb"));
+				Item.NewItem(i * 16, j * 16, 48, 48, ItemType("SunOrb"));
 			}
 		}
 

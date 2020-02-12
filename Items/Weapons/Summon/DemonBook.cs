@@ -11,7 +11,7 @@ namespace Monstroriam.Items.Weapons.Summon
 		{
 			DisplayName.SetDefault("Demon Book");
 			Tooltip.SetDefault("Summons a Demon");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			Item.staff[item.type] = true;
 		}
 
 		public override void SetDefaults()
@@ -24,7 +24,7 @@ namespace Monstroriam.Items.Weapons.Summon
 			item.useTime = 42;
 			item.useAnimation = 42;
 			item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
+			item.noMelee = true;
 			item.knockBack = 1;
 			item.value = 3200;
 			item.rare = 4;
@@ -36,19 +36,18 @@ namespace Monstroriam.Items.Weapons.Summon
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			// Fix the speedX and Y to point them horizontally.
 			speedX = new Vector2(speedX, speedY).Length() * (speedX > 0 ? 1 : -1);
 			speedY = 0;
-			// Add random Rotation
+			
 			Vector2 speed = new Vector2(speedX, speedY);
 			speed = speed.RotatedByRandom(MathHelper.ToRadians(5));
-			// Change the damage since it is based off the weapons damage and is too high
+			
 			speedX = speed.X;
 			speedY = speed.Y;
 			return true;
 		}
 
-		public override void AddRecipes() //item's recipe
+		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Book);

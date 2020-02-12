@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace Monstroriam
 {
@@ -14,7 +15,7 @@ namespace Monstroriam
 			{
 				if (Main.rand.NextFloat() < .15f)
 				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("PaperTome"));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("PaperTome"));
 				}
 			}
 
@@ -23,7 +24,7 @@ namespace Monstroriam
 			{
 				if (Main.rand.NextFloat() < .55f)
 				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ToxicStaff"));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("ToxicStaff"));
 				}
 			}
 
@@ -32,7 +33,7 @@ namespace Monstroriam
 			{
 				if (Main.rand.NextFloat() < .55f)
 				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LeafOrb"));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("LeafOrb"));
 				}
 			}
 
@@ -43,7 +44,7 @@ namespace Monstroriam
 				{
 					if (Main.rand.NextFloat() < .0002f)
 					{
-						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DCrystal"));
+						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("DCrystal"));
 					}
 				}
 			}
@@ -53,7 +54,7 @@ namespace Monstroriam
 			{
 				if (Main.rand.NextFloat() < .0015f)
 				{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CursedRod"));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("CursedRod"));
 				}
 			}
 
@@ -61,7 +62,7 @@ namespace Monstroriam
 			{
 				if (Main.rand.NextFloat() < .0095f)
 				{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ForbiddenWand"));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType("ForbiddenWand"));
 				}
 			}
 
@@ -72,7 +73,7 @@ namespace Monstroriam
 				{
 					if (Main.rand.NextFloat() < .0008f)
 					{
-						Item.NewItem(npc.getRect(), mod.ItemType("VulcanoWand"));
+						Item.NewItem(npc.getRect(), ItemType("VulcanoWand"));
 					}
 				}
 			}
@@ -81,7 +82,7 @@ namespace Monstroriam
 			{
 					if (Main.rand.NextFloat() < .001f)
 					{
-						Item.NewItem(npc.getRect(), mod.ItemType("TombCrawlerStaff"));
+						Item.NewItem(npc.getRect(), ItemType("TombCrawlerStaff"));
 					}
 			}
 
@@ -91,7 +92,7 @@ namespace Monstroriam
 				{
 					if (Main.rand.NextFloat() < .0002f)
 					{
-						Item.NewItem(npc.getRect(), mod.ItemType("CrystalWand"));
+						Item.NewItem(npc.getRect(), ItemType("CrystalWand"));
 					}
 				}
 			}
@@ -103,7 +104,7 @@ namespace Monstroriam
 				{
 					if (Main.rand.NextFloat() < .0009f)
 					{
-						Item.NewItem(npc.getRect(), mod.ItemType("ShadowflameScarf"));
+						Item.NewItem(npc.getRect(), ItemType("ShadowflameScarf"));
 					}
 				}
 			}

@@ -10,7 +10,7 @@ namespace Monstroriam.Items.Weapons.Magic
 		{
 			DisplayName.SetDefault("Snowball Wand");
 			Tooltip.SetDefault("Shoots Enchanted Snowballs");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			Item.staff[item.type] = true; 
 		}
 
 		public override void SetDefaults()
@@ -23,7 +23,7 @@ namespace Monstroriam.Items.Weapons.Magic
 			item.useTime = 26;
 			item.useAnimation = 78;
 			item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
+			item.noMelee = true; 
 			item.knockBack = 3;
 			item.value = 40;
 			item.rare = 0;

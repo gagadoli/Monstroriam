@@ -13,7 +13,7 @@ namespace Monstroriam.Items.Weapons.Magic
 		{
 			DisplayName.SetDefault("Crystal Wand");
 			Tooltip.SetDefault("Crystals falls from the sky");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			Item.staff[item.type] = true; 
 		}
 
 		public override void SetDefaults()
@@ -26,7 +26,7 @@ namespace Monstroriam.Items.Weapons.Magic
 			item.useTime = 10;
 			item.useAnimation = 10;
 			item.useStyle = 5;
-			item.noMelee = true; //so the item's animation doesn't do damage
+			item.noMelee = true; 
 			item.knockBack = 2;
 			item.value = 120000;
 			item.rare = 4;
@@ -52,8 +52,8 @@ namespace Monstroriam.Items.Weapons.Magic
 				float num15 = item.shootSpeed / num14;
 				float num16 = num12 * num15;
 				float num17 = num13 * num15;
-				float SpeedX = num16 + (float)Main.rand.Next(-12, 10) * 0.100f;  //This defines the projectile X position speed and randomness.
-				float SpeedY = num17 + (float)Main.rand.Next(-12, 10) * 0.100f;  //This defines the projectile Y position speed and randomness.
+				float SpeedX = num16 + (float)Main.rand.Next(-12, 10) * 0.100f;  
+				float SpeedY = num17 + (float)Main.rand.Next(-12, 10) * 0.100f;  
 				Projectile.NewProjectile(vector2_1.X, vector2_1.Y, SpeedX, SpeedY, type, damage, knockBack, Main.myPlayer, 0.0f, (float)Main.rand.Next(5));              
 			}
 			return false;
