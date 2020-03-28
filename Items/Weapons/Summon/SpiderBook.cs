@@ -10,23 +10,23 @@ namespace Monstroriam.Items.Weapons.Summon
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Spider Book");
-			Tooltip.SetDefault("Summons a Spider");
+			Tooltip.SetDefault("Summons a [c/DAAA9E:Spider]");
 			Item.staff[item.type] = true;
 		}
 
 		public override void SetDefaults()
 		{
 			item.damage = 12;
-			item.summon = true;
+            item.summon = true;
+            item.noMelee = true;
+            item.knockBack = 2;
+            item.useStyle = 5;
 			item.mana = 9;
 			item.width = 28;
 			item.height = 32;
 			item.useTime = 38;
 			item.useAnimation = 38;
-			item.useStyle = 5;
-			item.noMelee = true; 
-			item.knockBack = 2;
-			item.value = 1200;
+            item.value = Item.buyPrice(0, 0, 12, 0);
 			item.rare = 2;
 			item.UseSound = SoundID.Item8;
 			item.autoReuse = false;

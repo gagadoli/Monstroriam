@@ -12,27 +12,27 @@ namespace Monstroriam.Items.Weapons.Summon
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Vulcano Wand");
-			Tooltip.SetDefault("Summons a vulcano to shoot at your enemies");
+			Tooltip.SetDefault("Summons a [c/FF5605:flying Vulcano] to shoot at your enemies");
 		}
 
 		public override void SetDefaults()
 		{
 			item.damage = 19;
-			item.mana = 30;
+            item.summon = true;
+            item.sentry = true;
+            item.noMelee = true;
+            item.knockBack = 2;
+            item.useStyle = 1;
+            item.mana = 30;
 			item.width = 44;
 			item.height = 44;
 			item.useTime = 25;
-			item.useAnimation = 25;
-			item.useStyle = 1;
-			item.noMelee = true;
-			item.knockBack = 2;
-			item.value = 1345;
+			item.useAnimation = 25;		
+            item.value = Item.buyPrice(0, 0, 20, 40);
 			item.rare = 2;
 			item.UseSound = SoundID.Item44;
 			item.autoReuse = true;
 			item.shoot = mod.ProjectileType("VulcanoSentry");
-			item.summon = true;
-			item.sentry = true;
 		}
 
 		public override bool AltFunctionUse(Player player)

@@ -21,6 +21,7 @@ namespace Monstroriam.Projectiles.Minions
             projectile.penetrate = -1; 
             projectile.tileCollide = true; 
             projectile.sentry = true;
+            projectile.minion = true;
             ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true;
         }
 

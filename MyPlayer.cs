@@ -16,7 +16,8 @@ namespace Monstroriam
 	{
 		public bool CrystalPower = false;
 		public bool SunPower = false;
-		public bool CactusShield = false;
+        public bool DefensiveMode = false;
+        public bool CactusShield = false;
 		public bool VulcanoSentry = false;
 		public bool MeatTower = false;
 		public bool SmasherSentry = false;
@@ -26,7 +27,8 @@ namespace Monstroriam
 		{
 			CrystalPower = false;
 			SunPower = false;
-			CactusShield = false;	
+            DefensiveMode = false;
+            CactusShield = false;	
 			VulcanoSentry = false;
 			MeatTower = false;
 			SmasherSentry = false;
@@ -50,7 +52,7 @@ namespace Monstroriam
 			public override void SetStaticDefaults()
 			{
 				DisplayName.SetDefault("Shadowflame Scarf");
-				Tooltip.SetDefault("Minion's projectiles will cause Shadowflame debuff");
+				Tooltip.SetDefault("Minions will cause Shadowflame debuff on hit");
 			}
 			public override void SetDefaults()
 			{

@@ -17,15 +17,16 @@ namespace Monstroriam.Items.Weapons.Magic
 		{
 			item.damage = 6;
 			item.magic = true;
-			item.mana = 3;
+            item.noMelee = true;
+            item.useStyle = 5;
+            item.knockBack = 3;
+            item.mana = 3;
 			item.width = 48;
 			item.height = 48;
 			item.useTime = 26;
 			item.useAnimation = 78;
-			item.useStyle = 5;
-			item.noMelee = true; 
-			item.knockBack = 3;
-			item.value = 40;
+            item.value = Item.buyPrice(0, 0, 0, 40);
+            item.value = 40;
 			item.rare = 0;
 			item.UseSound = SoundID.Item20;
 			item.autoReuse = false;

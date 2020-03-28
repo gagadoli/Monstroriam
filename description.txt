@@ -1,12 +1,12 @@
-Monstroriam is a mod that add new weapons,accessories and useful furnitures for player before-hardmode.
-There are also some post-hardmode weapons too.
+Monstroriam is a mod that add new weapons of magic and summon classes and other useful stuff.
 
 Features:
-10 New Magic Weapons
-5 New Summon Weapons
-2 New Accessories
-3 New Furnitures
+10 Magic Weapons
+3 "Projectile shooting" Summon Weapons
+3 Sentry Weapons
+2 Accessories
+3 Furnitures
 PT-BR Localization
 
-First update:
-Added a new sentry
+1.0.4 update:
+New stuff

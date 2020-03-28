@@ -20,16 +20,16 @@ namespace Monstroriam.Items.Weapons.Magic
 		{
 			item.damage = 50;
 			item.magic = true;
-			item.mana = 15;
+            item.noMelee = true;
+            item.useStyle = 5;
+            item.knockBack = 6;
+            item.mana = 15;
 			item.width = 40;
 			item.height = 40;
 			item.useTime = 25;
 			item.useAnimation = 25;
-			item.useStyle = 5;
-			item.noMelee = true;
-			item.knockBack = 5;
-			item.value = 62000;
-			item.rare = 7;
+            item.value = Item.buyPrice(0, 6, 20, 0);
+            item.rare = 7;
 			item.UseSound = SoundID.Item20;
 			item.autoReuse = true;
 			item.shoot = ProjectileID.ChlorophyteOrb;

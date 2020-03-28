@@ -16,6 +16,8 @@ namespace Monstroriam.Projectiles
 		{
 			projectile.CloneDefaults(ProjectileID.FlowerPowPetal);
 			aiType = ProjectileID.FlowerPowPetal;
-		}
+            projectile.magic = true;
+            projectile.melee = false;
+        }
 	}
 }

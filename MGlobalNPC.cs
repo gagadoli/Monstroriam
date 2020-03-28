@@ -1,9 +1,11 @@
+using Monstroriam.Items.Weapons.Summon;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+
 
 namespace Monstroriam
 {
@@ -109,5 +111,16 @@ namespace Monstroriam
 				}
 			}
 		}
-	}
+
+        public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        {
+            if (type == NPCID.Dryad)
+            {
+                shop.item[nextSlot].SetDefaults(ItemType<BookOfProtection>());
+                shop.item[nextSlot].shopCustomPrice = 5;
+                shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals;
+                nextSlot++;
+            }
+        }
+    }
 }

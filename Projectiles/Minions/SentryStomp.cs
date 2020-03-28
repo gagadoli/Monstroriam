@@ -16,6 +16,10 @@ namespace Monstroriam.Projectiles.Minions
             aiType = ProjectileID.DD2OgreSmash;
 			projectile.hostile = false;
 			projectile.friendly = true;
+            projectile.minion = true;
+            projectile.magic = false;
+            projectile.melee = false;
+            projectile.ranged = false;
         }
 
 		public override string Texture

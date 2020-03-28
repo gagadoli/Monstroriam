@@ -10,23 +10,23 @@ namespace Monstroriam.Items.Weapons.Summon
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Demon Book");
-			Tooltip.SetDefault("Summons a Demon");
+			Tooltip.SetDefault("Summons a [c/9E4A4A:Demon]");
 			Item.staff[item.type] = true;
 		}
 
 		public override void SetDefaults()
 		{
 			item.damage = 20;
-			item.summon = true;
-			item.mana = 15;
+            item.summon = true;
+            item.noMelee = true;
+            item.knockBack = 2;
+            item.useStyle = 5;
+            item.mana = 15;
 			item.width = 28;
 			item.height = 32;
 			item.useTime = 42;
 			item.useAnimation = 42;
-			item.useStyle = 5;
-			item.noMelee = true;
-			item.knockBack = 1;
-			item.value = 3200;
+            item.value = Item.buyPrice(0, 0, 32, 0);
 			item.rare = 4;
 			item.UseSound = SoundID.Item8;
 			item.autoReuse = true;

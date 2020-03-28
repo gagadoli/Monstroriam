@@ -10,23 +10,23 @@ namespace Monstroriam.Items.Weapons.Summon
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Shark Book");
-			Tooltip.SetDefault("Summons a Shark");
+			Tooltip.SetDefault("Summons a [c/0922B5:Shark]");
 			Item.staff[item.type] = true;
 		}
 
 		public override void SetDefaults()
 		{
 			item.damage = 16;
-			item.summon = true;
-			item.mana = 12;
+            item.summon = true;
+            item.noMelee = true;
+            item.knockBack = 2;
+            item.useStyle = 5;
+            item.mana = 12;
 			item.width = 28;
 			item.height = 32;
 			item.useTime = 40;
-			item.useAnimation = 40;
-			item.useStyle = 5;
-			item.noMelee = true; 
-			item.knockBack = 5;
-			item.value = 2200;
+			item.useAnimation = 40;		
+            item.value = Item.buyPrice(0, 0, 22, 0);
 			item.rare = 3;
 			item.UseSound = SoundID.Item8;
 			item.autoReuse = false;

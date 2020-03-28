@@ -16,16 +16,16 @@ namespace Monstroriam.Items.Weapons.Magic
 		public override void SetDefaults()
 		{
 			item.damage = 5; 
-			item.magic = true; 
-			item.mana = 2; 
+			item.magic = true;
+            item.noMelee = true;
+            item.useStyle = 5;
+            item.knockBack = 2;
+            item.mana = 2; 
 			item.width = 46; 
 			item.height = 46; 
 			item.useTime = 45;
-			item.useAnimation = 45;
-			item.useStyle = 5; 
-			item.noMelee = true; 
-			item.knockBack = 2; 
-			item.value = 300; 
+			item.useAnimation = 45;								
+            item.value = Item.buyPrice(0, 0, 3, 0);
 			item.rare = 0; 
 			item.UseSound = SoundID.Item8;
 			item.autoReuse = false; 

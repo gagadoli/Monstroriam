@@ -12,27 +12,28 @@ namespace Monstroriam.Items.Weapons.Summon
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Tomb Crawler Staff");
-			Tooltip.SetDefault("Summons a Tomb Crawler Statue to attack your enemies");
+			Tooltip.SetDefault("Summons a [c/D8A768:Tomb Crawler Statue] to attack your enemies");
 		}
 
 		public override void SetDefaults()
 		{
 			item.damage = 10;
-			item.mana = 50;
+            item.summon = true;
+            item.sentry = true;
+            item.noMelee = true;
+            item.knockBack = 2;
+            item.useStyle = 1;
+            item.mana = 50;
 			item.width = 44;
 			item.height = 44;
 			item.useTime = 25;
 			item.useAnimation = 25;
-			item.useStyle = 1;
-			item.noMelee = true;
-			item.knockBack = 2;
-			item.value = 10000;
+            item.value = Item.buyPrice(0, 1, 20, 0);
 			item.rare = 2;
 			item.UseSound = SoundID.Item44;
 			item.autoReuse = true;
 			item.shoot = mod.ProjectileType("SmasherSentry");
-			item.summon = true;
-			item.sentry = true;
+			
 		}
 
 		public override bool AltFunctionUse(Player player)

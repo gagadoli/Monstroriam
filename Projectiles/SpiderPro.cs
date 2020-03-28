@@ -20,7 +20,7 @@ namespace Monstroriam.Projectiles
 			projectile.width = 54;
 			projectile.height = 54;
 			projectile.friendly = true;
-			projectile.magic = true;
+			projectile.minion = true;
 			projectile.ignoreWater = true;
 			projectile.tileCollide = false;
 			projectile.alpha = 255;
