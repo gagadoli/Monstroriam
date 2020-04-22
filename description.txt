@@ -2,7 +2,7 @@ Monstroriam is a mod that add new weapons of magic and summon classes and other 
 
 Features:
 10 Magic Weapons
-3 "Projectile shooting" Summon Weapons
+3 Summon Weapons
 3 Sentry Weapons
 2 Accessories
 3 Furnitures
