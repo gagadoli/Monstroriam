@@ -1,62 +1,81 @@
-using System;
+using Terraria;
+using Terraria.ModLoader;
+using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
+using System;
 
 namespace Monstroriam.Items.Weapons.Magic
 {
 	public class EtherianStaff : ModItem
 	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.SetDefault("Etherian Staff");
-			Tooltip.SetDefault("Shoots Etherian Shards");
-			Item.staff[item.type] = true; 
+		public override void SetStaticDefaults() 
+		{		
+			Tooltip.SetDefault("Shoots [c/2A9B39:Etherian Shards] at the ground");
+			Item.staff[item.type] = true;
 		}
 
-		public override void SetDefaults()
+		public override void SetDefaults() 
 		{
 			item.damage = 8;
 			item.magic = true;
-            item.noMelee = true;
-            item.useStyle = 5;
-            item.knockBack = 1;
-            item.mana = 4;
+			item.noMelee = true;
+			item.useStyle = 5;
+			item.knockBack = 1;
+			item.mana = 4;
 			item.width = 40;
 			item.height = 40;
 			item.useTime = 25;
 			item.useAnimation = 25;
-            item.value = Item.buyPrice(0, 0, 15, 0);
-			item.rare = 1;
+			item.value = Item.sellPrice(0, 0, 15, 0);
+			item.rare = ItemRarityID.White;
 			item.UseSound = SoundID.Item20;
 			item.autoReuse = false;
 			item.shoot = mod.ProjectileType("EtherianShard");
-			item.shootSpeed = 16f;
+			item.shootSpeed = 6f;
 		}
 
-		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack) 
+		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			int numberProjectiles = 2 + Main.rand.Next(2); 
-			for (int i = 0; i < numberProjectiles; i++)
+			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, player.whoAmI);
+
+			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
+			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(15)); 
-				
-				float scale = 1f - (Main.rand.NextFloat() * .3f);
-				perturbedSpeed = perturbedSpeed * scale; 
-				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
+				position += muzzleOffset;
 			}
-			return false; 
+			return true;
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.DD2EnergyCrystal, 15);
+			recipe.AddIngredient(ItemID.DD2EnergyCrystal, 5);
+			recipe.AddIngredient(ItemID.Wood, 10);
 			recipe.SetResult(this);
-			recipe.AddTile(TileID.Anvils);
 			recipe.AddRecipe();
+		}
+	}
+}
+
+namespace Monstroriam.Projectiles
+{
+	public class EtherianShard : ModProjectile
+	{
+		public override void SetDefaults()
+		{
+			projectile.width = 14;
+			projectile.height = 14;
+			projectile.friendly = true;
+			projectile.magic = true;
+			projectile.penetrate = 1;
+			projectile.timeLeft = 1600;
+			projectile.aiStyle = 14;
+		}
+
+		public override void Kill(int timeLeft)
+		{
+			Main.PlaySound(SoundID.Item7, projectile.position);
 		}
 	}
 }

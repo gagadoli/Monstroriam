@@ -12,18 +12,18 @@ using static Terraria.ModLoader.ModContent;
 
 namespace Monstroriam.Items.Placeables
 {
-	public class LeafOrb : ModItem
+	public class CrystalOrb : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Leaf Orb"); 
-			Tooltip.SetDefault("Increases [c/007F0F:max health/mana]");
+			DisplayName.SetDefault("Crystal Orb");
+			Tooltip.SetDefault("Increases [c/7561BF:max minions/sentries]");
 		}
 
 		public override void SetDefaults()
 		{
-			item.width = 32;
-			item.height = 32;
+			item.width = 48;
+			item.height = 38;
 			item.maxStack = 99;
 			item.useTurn = true;
 			item.autoReuse = true;
@@ -33,7 +33,7 @@ namespace Monstroriam.Items.Placeables
 			item.consumable = true;
 			item.value = Item.sellPrice(0, 0, 50, 0);
 			item.rare = ItemRarityID.Blue;
-			item.createTile = TileType<TLeafOrb>();
+			item.createTile = TileType<TCrystalOrb>();
 			item.placeStyle = 0;
 		}
 	}
@@ -41,12 +41,12 @@ namespace Monstroriam.Items.Placeables
 
 namespace Monstroriam.Buffs
 {
-	public class LeafPower : ModBuff
+	public class CrystalPower : ModBuff
 	{
 		public override void SetDefaults()
 		{
-			DisplayName.SetDefault("Leaf Power");
-			Description.SetDefault("+25 max health and mana");
+			DisplayName.SetDefault("Crystal Power");
+			Description.SetDefault("+1 Minion and +1 Sentry");
 			Main.buffNoTimeDisplay[Type] = true;
 			Main.buffNoSave[Type] = true;
 			canBeCleared = true;
@@ -54,8 +54,8 @@ namespace Monstroriam.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			player.statLifeMax2 += 25;
-			player.statManaMax2 += 25;
+			player.maxMinions += 1;
+			player.maxTurrets += 1;
 
 			if (player.dead)
 			{
@@ -67,7 +67,7 @@ namespace Monstroriam.Buffs
 
 namespace Monstroriam.Tiles
 {
-	public class TLeafOrb : ModTile
+	public class TCrystalOrb : ModTile
 	{
 		public override void SetDefaults()
 		{
@@ -77,18 +77,18 @@ namespace Monstroriam.Tiles
 			TileObjectData.newTile.StyleHorizontal = true;
 			TileObjectData.newTile.StyleWrapLimit = 36;
 			TileObjectData.addTile(Type);
-			dustType = 2;
+			dustType = 68;
 			disableSmartCursor = true;
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Leaf Orb");
-			AddMapEntry(new Color(0, 127, 15), name);
+			name.SetDefault("Crystal Orb");
+			AddMapEntry(new Color(114, 91, 197), name);
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
 			if (frameX == 0)
 			{
-				Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("LeafOrb"));
+				Item.NewItem(i * 16, j * 16, 48, 48, mod.ItemType("CrystalOrb"));
 			}
 		}
 
@@ -98,7 +98,7 @@ namespace Monstroriam.Tiles
 			{
 				if (!Main.player[Main.myPlayer].dead)
 				{
-					Main.player[Main.myPlayer].AddBuff(mod.BuffType("LeafPower"), 600);
+					Main.player[Main.myPlayer].AddBuff(mod.BuffType("CrystalPower"), 800);
 				}
 			}
 		}

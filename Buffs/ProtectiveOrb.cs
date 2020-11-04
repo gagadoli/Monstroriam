@@ -10,12 +10,13 @@ namespace Monstroriam.Buffs
         public override void SetDefaults()
         {
             DisplayName.SetDefault("Protective Orb");
-			Description.SetDefault("5% Reduced incoming damage");
+            Description.SetDefault("5% Reduced incoming damage and 5% more minion damage");
         }
 
         public override void Update(Player player, ref int buffIndex)
         {
             player.endurance += 0.05f;
+            player.minionDamage += 0.05f;
         }
     }
 }

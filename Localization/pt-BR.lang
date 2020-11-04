@@ -1,78 +1,53 @@
 BuffName.SunPower=Poder do Sol
-BuffDescription.SunPower="Resistência ao frio"
+BuffDescription.SunPower=+10% de dano e +5 perfuração de blindagem mas -10 de defesa
 
 BuffName.CrystalPower=Poder do Cristal
-BuffDescription.CrystalPower="Mais Lacaios!"
+BuffDescription.CrystalPower=+1 Lacaio e +1 Sentinela
 
-ProjectileName.VulcanoSentry=Sentinela Vulcanico
+BuffName.LeafPower=Poder da Folha
+BuffDescription.LeafPower=+25 de vida e mana máximas
 
-ProjectileName.DemoPro=Projetil Demônio
+BuffName.SlowDebuff=Lentidão
+BuffDescription.SlowDebuff=Você está lento
 
-ProjectileName.EnchantedBall=Bola de neve Encantada
+BuffName.ClayowlBuff=Coruja de barro
+BuffDescription.ClayowlBuff=A coruja te protegerá
+
+BuffName.TreeGuardian=Árvore guardiã
+BuffDescription.TreeGuardian=+5 de defesa e +10% de dano de invocação
 
 ProjectileName.EtherianShard=Estilhaço Etéria
 
-ProjectileName.HoneyPro=Projétil Mel
-
-ProjectileName.SharkPro=Projétil Tubarão
-
-ProjectileName.SpiderPro=Projétil Aranha
-
 ProjectileName.SunPetal=Pétala de girasol
 
+ProjectileName.TreeGuardian=Àrvore guardiã
+
 ItemName.CactusShield=Escudo de cacto
-ItemTooltip.CactusShield=Garante 1 de defesa \nAtacantes recebem dano de volta 
+ItemTooltip.CactusShield=Atacantes recebem dano de volta 
 
 ItemName.ShadowflameScarf=Cachecol da Chama Sombria
-ItemTooltip.ShadowflameScarf=Projéteis de Lacaios causam Chama Sombria
+ItemTooltip.ShadowflameScarf=Ataques de lacaios causam Chamas das sombras
 
-ItemName.DCrystal=Cristal dos Defensores
-ItemTooltip.DCrystal=Coloque essa coisa na parede
+ItemName.CrystalOrb=Orbe de cristal
+ItemTooltip.CrystalOrb=Aumenta o número máximo de lacaios e sentinelas
 
 ItemName.LeafOrb=Orbe da folha
-ItemTooltip.LeafOrb=Criado a partir da essência de uma Ninfa
+ItemTooltip.LeafOrb=Aumenta vida e mana máximas
 
 ItemName.SunOrb=Orbe do sol
-ItemTooltip.SunOrb=É igual ao sol, mas melhor
-
-ItemName.DemonBook=Livro dos Demônios
-ItemTooltip.DemonBook=Invoca um demônio
-
-ItemName.SharkBook=Livro dos tubarões
-ItemTooltip.SharkBook=Invoca um tubarão
-
-ItemName.VulcanoWand=Varinha do vulcão
-ItemTooltip.VulcanoWand=Invoca um sentinela vulcanico
-
-ItemName.SpiderBook=Livro das Aranhas
-ItemTooltip.SpiderBook=Invoca uma aranha
-
-ItemName.ChlorophyteStaff=Cajado de clorofito
-ItemTooltip.ChlorophyteStaff=Dispara orbes de clorofito
-
-ItemName.CrystalWand=Varinha de cristal
-ItemTooltip.CrystalWand=Dispara cristais que caem do céu
+ItemTooltip.SunOrb=Aumenta o dano mas diminui a defesa
 
 ItemName.EtherianStaff=Cajado de Eteria
-ItemTooltip.EtherianStaff=Dispara projéteis de Éter
-
-ItemName.CursedRod=Cajado Amaldiçoado
-ItemTooltip.CursedRod=Dispara crãnios amaldiçoados
-
-ItemName.HoneyWand=Varinha do mel
-ItemTooltip.HoneyWand=Dispara mel
-
-ItemName.PaperTome=Tomo de papel
-ItemTooltip.PaperTome=É mais perigoso do que parece
-
-ItemName.SnowballWand=Varinha de bola de neve
-ItemTooltip.SnowballWand=Dispara bolas de neve Encantadas
+ItemTooltip.EtherianStaff=Dispara 2 projéteis de Éter
 
 ItemName.SunflowerStaff=Cajado de girasol
 ItemTooltip.SunflowerStaff=Dispara uma pétala de girasol
 
-ItemName.ToxicStaff=Cajado Tóxico
-ItemTooltip.ToxicStaff=Dispara bolhas tóxicas
+ItemName.TreeGuardianAmulet=Amuleto árvore guardiã
+ItemTooltip.TreeGuardianAmulet=Invoca um guardião que concede defesa e dano
 
-ItemName.ForbiddenWand=Varinha Proibida
-ItemTooltip.ForbiddenWand=Dispara várias explosões negras
+ItemName.ClayBook=Livro de barro
+ItemTooltip.ClayBook=Invoca uma coruja de barro \nEla causa lentidão nos inimigos \nVocê só pode ter 1
+
+ItemName.GnomeBook=Livro de gnomo
+ItemTooltip.GnomeBook=Invoca gnomos corredores
