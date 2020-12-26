@@ -16,8 +16,8 @@ namespace Monstroriam.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Sun Orb");
 			Tooltip.SetDefault("Increases damage[c/FFD800: at the cost of defense]");
+			ItemID.Sets.ItemNoGravity[item.type] = true;
 		}
 
 		public override void SetDefaults()

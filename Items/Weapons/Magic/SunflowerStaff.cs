@@ -34,6 +34,14 @@ namespace Monstroriam.Items.Weapons.Magic
 			item.shootSpeed = 12f;
 		}
 
+		public override void ModifyWeaponDamage(Player player, ref float add, ref float mult, ref float flat)
+		{
+			if (player.HasBuff(BuffID.Sunflower))
+			{
+				mult = 1.2f;
+			}
+		}
+
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
 			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 35f;

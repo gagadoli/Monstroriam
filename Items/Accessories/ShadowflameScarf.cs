@@ -14,7 +14,7 @@ namespace Monstroriam.Items.Accessories
 		{
 			DisplayName.SetDefault("Shadowflame Scarf");
 			Tooltip.SetDefault("+10% summon damage"
-			+ "\nMinion attacks will cause [c/A41AE2:Shadowflame debuff]");
+			+ "\nSummon attacks will cause [c/A41AE2:Shadowflame debuff]");
 		}
 
 		public override void SetDefaults()
@@ -53,11 +53,12 @@ namespace Monstroriam.Items.Accessories
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 
-			recipe.AddIngredient(ItemID.TissueSample, 20);
-			recipe.AddIngredient(ItemID.ApprenticeScarf);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			ModRecipe recipe1 = new ModRecipe(mod);
+			recipe1.AddIngredient(ItemID.TissueSample, 20);
+			recipe1.AddIngredient(ItemID.ApprenticeScarf);
+			recipe1.AddTile(TileID.Loom);
+			recipe1.SetResult(this);
+			recipe1.AddRecipe();
 		}
 	}
 }

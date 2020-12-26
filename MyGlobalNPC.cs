@@ -12,6 +12,7 @@ namespace Monstroriam
 {
 	public class MyGlobalNPC : GlobalNPC
 	{
+		
 		public override void NPCLoot(NPC npc)
 		{
 			if (!npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly)
@@ -25,7 +26,7 @@ namespace Monstroriam
 				}
 			}
 
-			/*if (!npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly)
+			if (!npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly)
 			{
 				if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneUnderworldHeight)
 				{
@@ -35,14 +36,6 @@ namespace Monstroriam
 					}
 				}
 			}
-
-			if (npc.type == NPCID.TombCrawlerHead)
-			{
-					if (Main.rand.NextFloat() < .001f)
-					{
-						Item.NewItem(npc.getRect(), mod.ItemType("TombCrawlerStaff"));
-					}
-			}*/
 		}
 
         public override void SetupShop(int type, Chest shop, ref int nextSlot)
@@ -76,26 +69,54 @@ namespace Monstroriam
 		public override bool InstancePerEntity => true;
 
 		public bool SlowBuff;
+		public bool SharkBit;
 
 		public override void ResetEffects(NPC npc)
 		{
 			SlowBuff = false;
-		}
+			SharkBit = false;
+	}
 
 		public override void UpdateLifeRegen(NPC npc, ref int damage)
 		{
-			if (SlowBuff)
-			{	
-				if (!npc.boss)
-                {
-					npc.velocity.X = npc.velocity.X / 2;
-					npc.velocity.Y = npc.velocity.Y / 2;
+			if (SharkBit)
+			{
+				if (npc.type != NPCID.SkeletronHand && npc.type != NPCID.SkeletronHead && npc.type != NPCID.BoneSerpentHead && npc.type != NPCID.BoneSerpentBody && npc.type != NPCID.BoneSerpentTail && npc.type != NPCID.UndeadMiner && npc.type != NPCID.Tim && npc.type != NPCID.DungeonGuardian)
+				{
+					if (npc.lifeRegen > 0)
+					{
+						npc.lifeRegen = 0;
+					}
+					npc.lifeRegen -= 2;
+					if (damage < 1)
+					{
+						damage = 1;
+					}
 				}
 			}
 		}
 
 		public override void DrawEffects(NPC npc, ref Color drawColor)
 		{
+			if (SharkBit)
+			{
+				if (npc.type != NPCID.SkeletronHand && npc.type != NPCID.SkeletronHead && npc.type != NPCID.BoneSerpentHead && npc.type != NPCID.BoneSerpentBody && npc.type != NPCID.BoneSerpentTail && npc.type != NPCID.UndeadMiner && npc.type != NPCID.Tim && npc.type != NPCID.DungeonGuardian)
+				{
+					if (Main.rand.Next(4) < 1)
+					{
+						int dust = Dust.NewDust(npc.position - new Vector2(2f, 2f), npc.width + 4, npc.height + 4, 5, npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100, default(Color), 1.5f);
+						Main.dust[dust].noGravity = false;
+						Main.dust[dust].velocity *= 1f;
+						Main.dust[dust].velocity.Y -= 0.5f;
+						if (Main.rand.NextBool(4))
+						{
+							Main.dust[dust].noGravity = false;
+							Main.dust[dust].scale *= 0.5f;
+						}
+					}
+				}
+			}
+
 			if (SlowBuff)
 			{
 				if (!npc.boss)

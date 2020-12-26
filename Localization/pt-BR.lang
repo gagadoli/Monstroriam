@@ -51,3 +51,9 @@ ItemTooltip.ClayBook=Invoca uma coruja de barro \nEla causa lentidão nos inimig
 
 ItemName.GnomeBook=Livro de gnomo
 ItemTooltip.GnomeBook=Invoca gnomos corredores
+
+MapObject.CrystalOrb=Orbe de cristal
+
+MapObject.LeafOrb=Orbe da folha
+
+MapObject.SunOrb=Orbe do sol

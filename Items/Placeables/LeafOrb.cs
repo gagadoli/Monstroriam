@@ -16,8 +16,8 @@ namespace Monstroriam.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Leaf Orb"); 
 			Tooltip.SetDefault("Increases [c/007F0F:max health/mana]");
+			ItemID.Sets.ItemNoGravity[item.type] = true;
 		}
 
 		public override void SetDefaults()

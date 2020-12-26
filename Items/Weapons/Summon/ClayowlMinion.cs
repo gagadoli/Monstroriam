@@ -5,7 +5,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
-using Monstroriam;
 using Monstroriam.Projectiles;
 using Monstroriam.Buffs;
 
@@ -26,18 +25,18 @@ namespace Monstroriam.Items.Weapons.Summon
 		public override void SetDefaults()
 		{
 			item.damage = 2;
-			item.knockBack = 0f;
-			item.mana = 2;
+			item.summon = true;
+			item.noMelee = true;
+			item.useStyle = 5;
+			item.knockBack = 0;
+			item.mana = 12;
 			item.width = 28;
 			item.height = 30;
 			item.useTime = 36;
 			item.useAnimation = 36;
-			item.useStyle = 5;
 			item.value = Item.sellPrice(0, 0, 3, 2);
 			item.rare = ItemRarityID.Blue;
 			item.UseSound = SoundID.Item44;
-			item.noMelee = true;
-			item.summon = true;
 			item.buffType = BuffType<ClayowlBuff>();
 			item.shoot = ProjectileType<Clayowl>();
 		}
@@ -103,7 +102,11 @@ namespace Monstroriam.Buffs
 
 		public override void Update(NPC npc, ref int buffIndex)
 		{
-			npc.GetGlobalNPC<MyGlobalNPC>().SlowBuff = true;
+			if (!npc.boss)
+			{
+				npc.velocity.X = npc.velocity.X / 2;
+				npc.velocity.Y = npc.velocity.Y / 2;
+			}
 		}
 	}
 }

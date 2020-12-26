@@ -16,8 +16,8 @@ namespace Monstroriam.Items.Placeables
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Crystal Orb");
 			Tooltip.SetDefault("Increases [c/7561BF:max minions/sentries]");
+			ItemID.Sets.ItemNoGravity[item.type] = true;
 		}
 
 		public override void SetDefaults()
@@ -98,7 +98,7 @@ namespace Monstroriam.Tiles
 			{
 				if (!Main.player[Main.myPlayer].dead)
 				{
-					Main.player[Main.myPlayer].AddBuff(mod.BuffType("CrystalPower"), 800);
+					Main.player[Main.myPlayer].AddBuff(mod.BuffType("CrystalPower"), 600);
 				}
 			}
 		}
