@@ -69,7 +69,7 @@ namespace Monstroriam.Projectiles
 			projectile.height = 40;
 			projectile.friendly = true;
 			projectile.minion = true;
-			projectile.penetrate = 5;
+			projectile.penetrate = 6;
 			projectile.timeLeft = 720;
 			projectile.aiStyle = 1;
 		}
@@ -101,6 +101,12 @@ namespace Monstroriam.Projectiles
 
 		public override bool OnTileCollide(Vector2 oldVelocity)
 		{
+			projectile.penetrate--;
+			if (projectile.penetrate <= 0)
+			{
+				projectile.Kill();
+			}
+
 			projectile.velocity.Y = 0;
 			if (projectile.velocity.X != oldVelocity.X)
 			{

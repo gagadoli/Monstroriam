@@ -1,5 +1,6 @@
 using Monstroriam.Items.Placeables;
 using Monstroriam.Items.Accessories;
+using Monstroriam.Items.Weapons.Sentry;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -7,12 +8,10 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-
 namespace Monstroriam
 {
 	public class MyGlobalNPC : GlobalNPC
 	{
-		
 		public override void NPCLoot(NPC npc)
 		{
 			if (!npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly)
@@ -36,27 +35,92 @@ namespace Monstroriam
 					}
 				}
 			}
+
+			if (npc.type == NPCID.DD2DarkMageT1)
+			{
+				if (Main.rand.NextFloat() < .05f)
+				{
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("PaperTome"));
+				}
+			}
+
+			if (npc.type == NPCID.Salamander || npc.type == NPCID.Salamander2 || npc.type == NPCID.Salamander3 || npc.type == NPCID.Salamander4 || npc.type == NPCID.Salamander5 || npc.type == NPCID.Salamander6 || npc.type == NPCID.Salamander7 || npc.type == NPCID.Salamander8 || npc.type == NPCID.Salamander9)
+			{
+				if (Main.rand.NextFloat() < .01f)
+				{
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CultistIdol"));
+				}
+			}
 		}
 
         public override void SetupShop(int type, Chest shop, ref int nextSlot)
         {
 			if (type == NPCID.Dryad) 
 			{
-				if (Main.LocalPlayer.HasItem(ItemID.DefenderMedal))
+				if (Main.LocalPlayer.ZoneJungle)
 				{
 					shop.item[nextSlot].SetDefaults(ItemType<LeafOrb>());
-					shop.item[nextSlot].shopCustomPrice = 10;
+					shop.item[nextSlot].shopCustomPrice = 2;
+					shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals; 
+					nextSlot++;
+				}
+
+				if (Main.bloodMoon)
+				{
+					shop.item[nextSlot].SetDefaults(ItemType<DripplerPet>());
+					shop.item[nextSlot].shopCustomPrice = 5;
 					shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals;
 					nextSlot++;
 				}
 			}
 
+			if (type == NPCID.ArmsDealer)
+			{
+				if (Main.LocalPlayer.HasItem(ItemID.LifeCrystal) || Main.LocalPlayer.HasItem(ItemID.ManaCrystal))
+				{
+					shop.item[nextSlot].SetDefaults(ItemType<DispenserBook>());
+					shop.item[nextSlot].shopCustomPrice = 15;
+					shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals;
+					nextSlot++;
+				}
+			}
+
+			if (type == NPCID.DyeTrader)
+			{
+				if (Main.LocalPlayer.ZoneDesert || Main.LocalPlayer.ZoneUndergroundDesert)
+				{
+					shop.item[nextSlot].SetDefaults(ItemType<Bulrush>());
+					shop.item[nextSlot].shopCustomPrice = 6;
+					shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals;
+					nextSlot++;
+				}
+			}
+
+			if (type == NPCID.TravellingMerchant)
+			{
+				if (Main.LocalPlayer.HasItem(ItemID.Blowpipe))
+				{
+					shop.item[nextSlot].SetDefaults(ItemType<GhostPepper>());
+					shop.item[nextSlot].shopCustomPrice = 6;
+					shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals;
+					nextSlot++;
+				}
+			}
+
+			if (type == NPCID.SkeletonMerchant)
+			{
+				shop.item[nextSlot].SetDefaults(ItemType<BatDagger>());
+				shop.item[nextSlot].shopCustomPrice = 8;
+				shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals;
+				nextSlot++;
+			}
+
 			if (type == NPCID.WitchDoctor)
 			{
-				if (Main.LocalPlayer.HasItem(ItemID.DefenderMedal))
+				if (Main.LocalPlayer.HasItem(ItemID.LivingMahoganyWand))
 				{
 					shop.item[nextSlot].SetDefaults(ItemType<TreeGuardianAmulet>());
-					shop.item[nextSlot].shopCustomPrice = 20;
+					shop.item[nextSlot].shopCustomPrice = 12;
 					shop.item[nextSlot].shopSpecialCurrency = CustomCurrencyID.DefenderMedals;
 					nextSlot++;
 				}
@@ -70,12 +134,16 @@ namespace Monstroriam
 
 		public bool SlowBuff;
 		public bool SharkBit;
+		public bool graniteDot;
+		public bool sandBuff;
 
 		public override void ResetEffects(NPC npc)
 		{
 			SlowBuff = false;
 			SharkBit = false;
-	}
+			graniteDot = false;
+			sandBuff = false;
+		}
 
 		public override void UpdateLifeRegen(NPC npc, ref int damage)
 		{
@@ -110,7 +178,6 @@ namespace Monstroriam
 						Main.dust[dust].velocity.Y -= 0.5f;
 						if (Main.rand.NextBool(4))
 						{
-							Main.dust[dust].noGravity = false;
 							Main.dust[dust].scale *= 0.5f;
 						}
 					}
@@ -130,8 +197,6 @@ namespace Monstroriam
 						Main.dust[dust].velocity.Y -= 0.5f;
 						if (Main.rand.NextBool(4))
 						{
-							Main.dust[dust].noGravity = true;
-							Main.dust[dust].noLight = true;
 							Main.dust[dust].scale *= 0.5f;
 						}
 					}

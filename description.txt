@@ -1,29 +1,37 @@
-Monstroriam is a mod focused on adding new magic and summon itens, mostly pre-hardmode.
+Monstroriam is a mod focused on adding new pre-hardmode weapons, with new summoner weapons made for active gameplay.
 
 Features:
-2 Magic Weapons
+8 Magic Weapons
 8 Summon Weapons
-3 Sentry Weapons
-3 Accessories
+1 Minion Weapon
+8 Sentry Weapons
+2 Accessories
+1 "Inventory item"
+4 Pets
 3 "Arena" Furnitures
 
 PT-BR Localization
 
-2.1.0 update:
-- Added Scorpion book
-- Added Krampus book
-- Added Lava shark book
-- Added Slime Hammer
-- Added Ghost Pepper staff
-- Reworked TombCrawler and Vulcano sentries
-- Reworked Shark book
+2.3.1 update:
+- Added Cultist Idol
+- Added Cursed Katana
+- Added Bulrush
 
-upcoming weapons:
-- Bone trident
-- Granite trident
-- Toxic staff
-- Paper tome
-- Antlion wand
-- Book of protection
-- Betsy staff
-- Demon book
+Planned weapons:
+- Bone Trident
+- Horse Army
+- Defender Plane
+- Toxic Staff
+- Meat Tower
+- Haunted Grave
+- Hypno Shroom
+- Dragon Axe
+- Honey Wand
+- Crystal Wand
+- Dragon Spear
+- Memaid Trident
+- Kitten Knife
+- Lantern Sentry
+- Snow Staff
+- Demon Book
+- Enchanted Branch

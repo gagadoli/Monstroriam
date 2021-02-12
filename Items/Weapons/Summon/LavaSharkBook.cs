@@ -13,9 +13,8 @@ namespace Monstroriam.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lava shark Book");
-			Tooltip.SetDefault("Summons a swarm of [c/A55F55:Lava sharks]"
-				+ "\n3% chance to apply Oiled or OnFire");
+			Tooltip.SetDefault("Summons a swarm of [c/DA5302:Lava Sharks]"
+				+ "\nSmall chance to apply [c/494949:Oiled] or [c/FD8F4D:OnFire]");
 		}
 
 		public override void SetDefaults()
@@ -76,20 +75,22 @@ namespace Monstroriam.Projectiles
 			projectile.friendly = true;
 			projectile.minion = true;
 			projectile.ignoreWater = false;
-			projectile.tileCollide = true;
+			projectile.tileCollide = false;
 			projectile.alpha = 55;
 			projectile.penetrate = -1;
+			projectile.usesLocalNPCImmunity = true;
+			projectile.localNPCHitCooldown = -1;
 		}
 
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
 		{
-			target.immune[projectile.owner] = 15;
-			if (Main.rand.Next(29) == 0)
+			target.immune[projectile.owner] = 10;
+			if (Main.rand.Next(30) == 0)
 			{
 				target.AddBuff(BuffID.Oiled, 900);
 			}
 
-			if (Main.rand.Next(29) == 0)
+			if (Main.rand.Next(9) == 0)
 			{
 				target.AddBuff(BuffID.OnFire, 300);
 			}

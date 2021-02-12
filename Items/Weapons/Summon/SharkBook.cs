@@ -14,8 +14,8 @@ namespace Monstroriam.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shark Book");
-			Tooltip.SetDefault("Summons a [c/0922B5:Shark]");
+			Tooltip.SetDefault("Summons a [c/0922B5:Spectral Shark]"
+				+ "\n50% chance to make enemies [c/FF0000:bleed]");
 		}
 
 		public override void SetDefaults()

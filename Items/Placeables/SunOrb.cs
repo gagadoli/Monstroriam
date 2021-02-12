@@ -43,7 +43,7 @@ namespace Monstroriam.Items.Placeables
 			recipe.AddIngredient(ItemID.Sunglasses);
 			recipe.AddIngredient(ItemID.FallenStar, 5);
 			recipe.AddTile(TileID.Furnaces);
-			recipe.SetResult(this);
+			recipe.SetResult(this, 5);
 			recipe.AddRecipe();
 		}
 	}

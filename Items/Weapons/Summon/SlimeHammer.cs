@@ -14,8 +14,8 @@ namespace Monstroriam.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults() 
 		{
-			Tooltip.SetDefault("Throws [c/FF0000:slime hammers]" +
-				"\n50% chance to spawn a slime");
+			Tooltip.SetDefault("Throws a [c/EA9931:Slime hammer]"
+				+	"\n50% chance to spawn a [c/4FACB2:slime]");
 		}
 
 		public override void SetDefaults()
@@ -35,7 +35,7 @@ namespace Monstroriam.Items.Weapons.Summon
 			item.rare = ItemRarityID.Orange;
 			item.autoReuse = false;
 			item.shoot = mod.ProjectileType("SlimeHammerProj");
-			item.shootSpeed = 8f;
+			item.shootSpeed = 10f;
 		}
 
 		public override void AddRecipes()

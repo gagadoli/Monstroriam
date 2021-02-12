@@ -15,8 +15,8 @@ namespace Monstroriam.Items.Weapons.Sentry
 		{
 			Tooltip.SetDefault("Summons a [c/776B77:Ghost Pepper] to protect your garden"
 				+ "\nNeed seeds to be summoned"
-				+ "\n<right> to remove all sentries"
-				+ "\nEnemy's knockback resistance is removed on hit");
+				+ "\nEnemy's knockback resistance is removed on hit"
+				+ "\n<right> to remove all sentries");
 		}
 
 		public override void SetDefaults()
@@ -110,7 +110,7 @@ namespace Monstroriam.Projectiles
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
 			projectile.penetrate = -1;
-			projectile.timeLeft = 3600;
+			projectile.timeLeft = 6800;
 		}
 
 		public override bool? CanCutTiles()

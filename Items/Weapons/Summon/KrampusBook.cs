@@ -12,8 +12,7 @@ namespace Monstroriam.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Krampus Book");
-			Tooltip.SetDefault("Summons a [c/9E4A4A:krampus]");
+			Tooltip.SetDefault("Summons a [c/2D2D2D:Spectral Krampus]");
 		}
 
 		public override void SetDefaults()

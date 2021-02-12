@@ -13,7 +13,7 @@ namespace Monstroriam.Items.Weapons.Sentry
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Summons a [c/D8A768:Tomb Crawler Statue] to create earthquakes" 
+			Tooltip.SetDefault("Summons a [c/D8A768:Tomb Crawler Statue] to create earthquakes"
 				+ "\n<right> to remove all sentries");
 		}
 

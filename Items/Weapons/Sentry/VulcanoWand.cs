@@ -14,9 +14,9 @@ namespace Monstroriam.Items.Weapons.Sentry
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Vulcano Wand");
-			Tooltip.SetDefault("Summons a [c/FF5605:flying Vulcano] to shoot fireballs at your enemies"
-				+ "\n<right> to remove all sentries"
-				+ "\nFireballs set enemies on fire and imbue your weapon with fire");
+			Tooltip.SetDefault("Summons a flying [c/FF5605:Vulcano] to shoot fireballs at your enemies"
+				+ "\n[c/FF5605:Fireballs] set enemies on fire and imbue your melee weapons with fire"
+				+ "\n<right> to remove all sentries");
 		}
 
 		public override void SetDefaults()

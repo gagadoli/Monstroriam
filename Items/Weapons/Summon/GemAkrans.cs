@@ -14,12 +14,12 @@ namespace Monstroriam.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults() 
 		{
-			Tooltip.SetDefault("Summons an army of [c/BF4E00:Gem] [c/636363:Squirrels]");
+			Tooltip.SetDefault("Summons 3 [c/FF0000:G][c/FFEE00:e][c/26FF00:m] [c/9E9E9E:Squirrels]");
 		}
 
 		public override void SetDefaults() 
 		{
-			item.damage = 5;
+			item.damage = 6;
 			item.summon = true;
 			item.noMelee = true;
 			item.noUseGraphic = true;
@@ -64,7 +64,7 @@ namespace Monstroriam.Items.Weapons.Summon
 			recipe.AddIngredient(ItemID.Amethyst);
 			recipe.AddIngredient(ItemID.Diamond);
 			recipe.AddIngredient(ItemID.Amber);
-			recipe.AddTile(TileID.DemonAltar);
+			recipe.AddTile(TileID.Extractinator);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

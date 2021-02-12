@@ -12,9 +12,8 @@ namespace Monstroriam.Items.Weapons.Summon
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Scorpion Book");
-			Tooltip.SetDefault("Summons a [c/A55F55:Scorpion] to fight for you"
-				+ "\n50% chance to poison enemies");
+			Tooltip.SetDefault("Summons a [c/694D73:Spectral Scorpion]"
+				+ "\n50% chance to [c/694D73:poison] enemies");
 		}
 
 		public override void SetDefaults()

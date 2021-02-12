@@ -10,17 +10,106 @@ BuffDescription.LeafPower=+25 de vida e mana máximas
 BuffName.SlowDebuff=Lentidão
 BuffDescription.SlowDebuff=Você está lento
 
-BuffName.ClayowlBuff=Coruja de barro
+BuffName.Haunt=Assombrado
+BuffDescription.Haunt=AAAAAAAAAAAHHH
+
+BuffName.SharkBite=Mordida de Tubarão
+BuffDescription.SharkBite=Você está sangrando
+
+BuffName.ClayowlBuff=Coruja de Barro
 BuffDescription.ClayowlBuff=A coruja te protegerá
 
-BuffName.TreeGuardian=Árvore guardiã
+BuffName.TreeGuardian=Árvore Guardiã
 BuffDescription.TreeGuardian=+5 de defesa e +10% de dano de invocação
+
+BuffName.DripplerPetBuff=Bola de Carne
+BuffDescription.DripplerPetBuff=A enfermeira causa um efeito de regeneração quando cura
+
+BuffName.DragonflyBuff=Libelulas
+BuffDescription.DragonflyBuff=Atacam inimigos próximos
+
+BuffName.BatPetBuff=Morcego sangue-suga
+BuffDescription.BatPetBuff=Periodicamente rouba a vida de inimigos
+
+BuffName.GraniteDebuff=Debuff de granito
+BuffDescription.GraniteDebuff=Defesa reduzida
+
+BuffName.SandDebuff=Debuff de areia
+BuffDescription.SandDebuff=Você não pode pular
 
 ProjectileName.EtherianShard=Estilhaço Etéria
 
 ProjectileName.SunPetal=Pétala de girasol
 
 ProjectileName.TreeGuardian=Àrvore guardiã
+
+ProjectileName.Clayowl=Coruja de barro
+
+ProjectileName.GemSquirrel1=Esquilo de cristal1
+
+ProjectileName.GemSquirrel2=Esquilo de cristal2
+
+ProjectileName.GemSquirrel3=Esquilo de cristal3
+
+ProjectileName.GemSquirrel4=Esquilo de cristal4
+
+ProjectileName.GemSquirrel5=Esquilo de cristal5
+
+ProjectileName.GemSquirrel6=Esquilo de cristal6
+
+ProjectileName.GemSquirrel7=Esquilo de cristal7
+
+ProjectileName.GhostPepperProj=Pimenta fantasma Proj
+
+ProjectileName.GhostPepperSentry=Pimenta fantasma sentinela
+
+ProjectileName.GnomeRun=GnomoCorredor
+
+ProjectileName.LavaSharkPro=Tubarão de lava Pro
+
+ProjectileName.ScorpionProj= Escorpião Proj
+
+ProjectileName.SharkPro=Tubarão Pro
+
+ProjectileName.SlimeHammerProj=Martelo de gosma Proj
+
+ProjectileName.SlimeProj=Gosma Proj
+
+ProjectileName.SmasherSentry=Esmagador Proj
+
+ProjectileName.VulcanoSentry=Vulcão sentinela
+
+ProjectileName.SamuraiSlash=Corte Samurai
+
+ProjectileName.BetsyProj=Betsy Proj
+
+ProjectileName.BetsyFire1=Bomba da Betsy
+
+ProjectileName.BetsyFire2=Exaplosão da Betsy
+
+ProjectileName.GraniteShard=Fragmento de Granito
+
+ProjectileName.FrostFireball=Bola de gelo
+
+ProjectileName.ErchiusLaser=Laser Erchius
+
+ProjectileName.MonkFist=Soco de Monge
+
+ProjectileName.MonkFist2=Soco de Monge 2
+
+ProjectileName.DripplerPetProj=Bola de Carne Proj
+
+ProjectileName.DragonflyProj2=Libelula Proj 1
+
+ProjectileName.DragonflyProj4=Libelula Proj 2
+
+ProjectileName.DragonflyProj6=Libelula Proj 3
+
+ProjectileName.BatPetProj=Morcego Proj 1
+
+ProjectileName.BatLeechProj=Morcego Proj 2
+
+ProjectileName.BatLeechProj2=Morcego Proj 3
 
 ItemName.CactusShield=Escudo de cacto
 ItemTooltip.CactusShield=Atacantes recebem dano de volta 
@@ -49,8 +138,68 @@ ItemTooltip.TreeGuardianAmulet=Invoca um guardião que concede defesa e dano
 ItemName.ClayBook=Livro de barro
 ItemTooltip.ClayBook=Invoca uma coruja de barro \nEla causa lentidão nos inimigos \nVocê só pode ter 1
 
-ItemName.GnomeBook=Livro de gnomo
-ItemTooltip.GnomeBook=Invoca gnomos corredores
+ItemName.GhostPepper=Pimenta fantasma
+ItemTooltip.GhostPepper=Precisa de sementes para ser invocado \n<right> para remover todas as sentinelas \nResistência a knockback é removida
+
+ItemName.SharkBook=Livro do tubarão
+ItemTooltip.SharkBook=Invoca um tubarão espectral \n50% chance de fazer inimigos sangrarem
+
+ItemName.LavaSharkBook=Livro do tubarão de lava
+ItemTooltip.LavaSharkBook=Invoca uma enxurrada de tubarões de lava \n3% de chance de queimar ou olear inimigos
+
+ItemName.TombCrawlerStaff=Cajado da tumba
+ItemTooltip.TombCrawlerStaff=Invoca uma estatua que cria terremotos \n<right> para remover todas as sentinelas
+
+ItemName.VulcanoWand=Varinha de vulcão
+ItemTooltip.VulcanoWand=Invoca um vulcão que atira bolas de fogo \n<right> para remover todas as sentinelas \nBolas de fogo queimam inimigos e deixa suas armas fisicas com dano de fogo
+
+ItemName.GemAkrans=Pinhas de cristal
+ItemTooltip.GemAkrans=Invoca um exercito de esquilos de cristal
+
+ItemName.GnomeBook=Livro de gnomos
+ItemTooltip.GnomeBook=Invoca 4 gnomos corredores
+
+ItemName.KrampusBook=Livro de krampus
+ItemTooltip.KrampusBook=Invoca um krampus espectral
+
+ItemName.ScorpionBook=Livro de escorpião
+ItemTooltip.ScorpionBook=Invoca um escorpião espectral \n50% de chance de envenenar inimigos
+
+ItemName.SlimeHammer=Martelo de gosma
+ItemTooltip.SlimeHammer=50% de chacne de invocar uma gosma
+
+ItemName.BatDagger=Faca de Morcego
+ItemTooltip.BatDagger=Invoca um morcego espectral \nAumenta o tamanho do pulo
+
+ItemName.CursedKatana=Katana amaldiçoada
+ItemTooltip.CursedKatana=Ataques de lacaios podem invocar samurais \nO samurai dá o dano da arma dobrado \nMantenha esse item no inventário para receber esse efeito
+
+ItemName.PaperTome=Tomo de Papel
+ItemTooltip.PaperTome=Atira Papel
+
+ItemName.GraniteTrident=Tridente de Granito
+ItemTooltip.GraniteTrident=Atira fragmentos de granito que reduzem a defesa em 5
+
+ItemName.FrostDragon=Dragão de Gelo
+ItemTooltip.FrostDragon=Atira bolas de água congeladas \n25% de causar congelamento \nMelhora sua visão debaixo d'água \nSó pode ser usado debaixo d'água
+
+ItemName.ErchiusEye=Olho de Erchius
+ItemTooltip.ErchiusEye=Deixa inimigos lentos
+
+ItemName.DefenderRod=Cajado da Defesa
+ItemTooltip.DefenderRod=Atira punhos do céu \nApós acertar o solo, cria outro punho 2x mais forte \nRecomenda-se usar em espaços abertos
+
+ItemName.BetsyStaff=Cajado da Betsy
+ItemTooltip.BetsyStaff=Invoca uma Betsy espectral que solta bombas
+
+ItemName.DripplerPet=Bola de carne
+ItemTooltip.DripplerPet=Causa regeneração de vida quando curado pela enfermeira
+
+ItemName.Bulrush=
+ItemTooltip.Bulrush=Invoca 3 libelulas para atacar inimigos \nDiminui o tamanho do pulo do inimigo
+
+ItemName.CultistIdol=Idolo do Cultista
+ItemTooltip.CultistIdol=Invoca uma estatua que cria mini pilares baseados no tipo de dano da sua arma  \n<right> para remover todas as sentinelas
 
 MapObject.CrystalOrb=Orbe de cristal
 

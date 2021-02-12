@@ -16,7 +16,7 @@ namespace Monstroriam.Items.Weapons.Summon
 		{
 			DisplayName.SetDefault("Clay Owl Book");
 			Tooltip.SetDefault("Summons a [c/A55F55:Clay Owl] to fight for you"
-				+ "\nIt [c/A55F55:Slows] enemies in contact"
+				+ "\nIt [c/A55F55:Slows] enemies on contact"
 				+ "\nYou can have only one");
 			ItemID.Sets.GamepadWholeScreenUseRange[item.type] = true;
 			ItemID.Sets.LockOnIgnoresCollision[item.type] = true;
@@ -104,8 +104,8 @@ namespace Monstroriam.Buffs
 		{
 			if (!npc.boss)
 			{
-				npc.velocity.X = npc.velocity.X / 2;
-				npc.velocity.Y = npc.velocity.Y / 2;
+				npc.velocity.X = npc.velocity.X / 2f;
+				npc.velocity.Y = npc.velocity.Y / 2f;
 			}
 		}
 	}
@@ -140,7 +140,6 @@ namespace Monstroriam.Projectiles
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
 		{
 			target.AddBuff(mod.BuffType("SlowDebuff"), 60);
-
 		}
 
 		public override bool? CanCutTiles()
@@ -301,5 +300,4 @@ namespace Monstroriam.Projectiles
 			#endregion
 		}
 	}
-
 }

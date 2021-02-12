@@ -1,9 +1,9 @@
+using System;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 
 namespace Monstroriam.Items.Weapons.Magic
 {
@@ -17,12 +17,12 @@ namespace Monstroriam.Items.Weapons.Magic
 
 		public override void SetDefaults() 
 		{
-			item.damage = 8;
+			item.damage = 12;
 			item.magic = true;
 			item.noMelee = true;
 			item.useStyle = 5;
 			item.knockBack = 1;
-			item.mana = 4;
+			item.mana = 14;
 			item.width = 40;
 			item.height = 40;
 			item.useTime = 25;
@@ -37,7 +37,7 @@ namespace Monstroriam.Items.Weapons.Magic
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, player.whoAmI);
+			Projectile.NewProjectile(position.X, position.Y, speedX, speedY - 1, type, damage, knockBack, player.whoAmI);
 
 			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
 			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
@@ -68,7 +68,7 @@ namespace Monstroriam.Projectiles
 			projectile.height = 14;
 			projectile.friendly = true;
 			projectile.magic = true;
-			projectile.penetrate = 1;
+			projectile.penetrate = 6;
 			projectile.timeLeft = 1600;
 			projectile.aiStyle = 14;
 		}
